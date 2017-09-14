@@ -3,7 +3,7 @@ language: swift
 osx_image: xcode8.3
 
 script:
-  - xcodebuild -scheme qa-ios -workspace qa-ios.xcodeproj build test
+  - xcodebuild -scheme qa-ios -destination 'platform=iOS Simulator,name=iPhone 7' build test
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
